@@ -1,0 +1,54 @@
+
+AngularJS 1.x ---> Javascript
+
+
+Google
+
+Angular --> Typescript 
+
+Angular with CLI.
+
+Command Line Interface --> just write some commands we can create angular projects and angular building blocks
+
+HTML-5
+Bootstrap
+All Browsers
+Javascript
+TypeScript
+
+For Angular we should have Node.js and NPM installed in our machines.
+
+To very node and npm use below commands
+->node -v
+
+->npm -v
+
+Angular Installation:
+---------------------
+
+-> npm install  -g  @angular/cli
+// above command install angular latest version globally
+
+
+-> npm install -g  @angular/cli@15
+
+// above command install angular 15 version globally
+
+
+
+How to verify angular in our machine?
+
+->  ng version
+
+ng- angular command
+
+
+
+
+
+
+
+
+
+
+
