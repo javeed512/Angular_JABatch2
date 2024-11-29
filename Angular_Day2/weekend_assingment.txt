@@ -1,0 +1,36 @@
+
+
+Revise and Practice
+-------------------
+1. Built-in Directives
+   ngIf,ngFor,ngSwitch,ngStyle,ngClass,ngNonBindable
+2. Create any Custom Directive
+
+3. Buil-in Pipes
+
+    number , date , json , slice , uppercase, lowercase  etc
+
+4.  Create any Custom Pipe 
+
+
+Weekend Assignment:
+-------------------
+1. Practice HTML5 DOM , Forms with validations,Tables,List,Images,Anchor tag , Dropdown , Header ,Footer etc from w3schools.
+2. Practice CSS and Bootstrap from w3schools.
+3. Revise Angular and NodeJS Theory from given PDFs or Online Tutorials
+4. Revise and Practice Angular topics like
+	->Building blocks of angular
+	-> Components 
+	-> DataBindings (all types)
+	-> All Directives (custom also)
+	-> All Pipes   (custom also)
+	-> Interface/Models (any pojo from case study)	
+
+
+
+Project Work:
+Analyse and Design 
+Webpages for your case study using HTML5 ,CSS, Bootstrap
+
+
+
