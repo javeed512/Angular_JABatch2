@@ -1,0 +1,41 @@
+<h1>Welcome to Angular</h1>
+
+
+
+{{name  | uppercase  }}  <br>
+
+{{ 50000  | currency:'INR'  }}  <br>
+
+{{ 250 | number }}  <br>
+
+{{ 25 | percent:'4.0' }} <br>
+
+{{   '2024-11-29' | date:'full' }} <br>
+
+{{   '2024-11-29' | date:'short' }} <br>
+
+{{   '2024-11-29' | date:'mediumTime' }} <br>
+
+{{ 'javeed' | slice:2:6  }}
+
+<br>
+
+
+My Custom Pipe Multiply:  {{ 5 | multiply:5  }}
+
+
+
+<div>  {{empList | json }}</div>
+
+
+<br>
+
+<table border="1">
+    <tr> <th>index</th> <th>eid</th><th>ename</th><th>salary</th> </tr>
+    <tr *ngFor="let emp of empList; let i = index"  > <td>{{i}}</td>  <td>{{ emp.eid}} </td> <td>{{ emp.ename}} </td>  <td>{{ emp.salary}} </td>    </tr>
+
+</table>
+
+
+
+

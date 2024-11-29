@@ -1,0 +1,66 @@
+
+Angular Directives:
+--------------------
+
+1.Components with Templates are known as Directive.
+
+2. Structural Directives
+  ngIf , ngFor , ngSwitch 
+3.Attribute Directives
+   ngStyle , ngClass , ngNonBindable
+
+
+Custom Directive:
+==================
+
+ng   generate  directive  mydir
+
+
+
+
+
+
+Example:
+
+
+
+import { Directive, ElementRef, HostListener, Renderer2 } from '@angular/core';
+
+@Directive({
+  selector: '[appCardHover]'
+})
+export class CardHoverDirective {
+
+
+
+  constructor(private el:ElementRef, private renderer: Renderer2) {
+  
+   
+
+  }
+
+  @HostListener('mouseover') onMouseOver() {
+    
+
+    this.renderer.setStyle(this.el.nativeElement, 'backgroundColor','red')
+
+      alert('mouser is over context');
+
+
+    }
+
+
+  
+
+}
+
+
+
+
+
+
+
+
+
+
+
