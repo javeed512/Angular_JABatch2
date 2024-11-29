@@ -1,0 +1,86 @@
+
+
+<h1 ngNonBindable> {{HELLO}}  </h1>
+
+<!-- style directives -->
+
+<h1  [ngStyle]="{color:mycolor}" >Welcome to Angular</h1>
+
+<div class = "bordered">Hello Folks</div>
+
+<div [ngClass]="{bordered:flag}">Hello Javeed</div>
+
+
+<!-- ngIf directive -->
+
+<div  *ngIf="true" >Hello friends 1 </div>
+
+<div  *ngIf="flag" >Hello friends 2 </div>
+
+<div  *ngIf=" 3 > 2" >Hello friends 3 </div>
+
+<div  *ngIf="isValid()" >Hello friends 4 </div>
+
+
+   <!-- ngSwitch directive -->
+
+  <div  [ngSwitch]="count">
+  <div   *ngSwitchCase="1"> One </div>
+  <div   *ngSwitchCase="2"> Two </div>
+  <div   *ngSwitchCase="3"> Three </div>
+  <div  *ngSwitchDefault > Invalid Input</div>
+
+
+   </div>
+
+    <!-- ngSwitch demo 2 -->
+
+
+    Enter Course:  <input type="text" name="course"  [(ngModel)]="course"  > <br>
+
+    <div  [ngSwitch]="course">
+        <div   *ngSwitchCase="'java'"> Java Course  <img src="/assets/java.png" alt="java logo"> </div>
+        <div   *ngSwitchCase="'sql'"> SQL Course   <img src="/assets/sql.png" alt="sql logo"> </div>
+        <div   *ngSwitchCase="'python'"> Python Course   <img src="/assets/python.png" alt="python logo"> </div>
+        <div  *ngSwitchDefault > No Course   <img src="/assets/nothing.png" alt="java logo"> </div>
+      
+      
+         </div>
+
+
+
+         <br>
+       <!-- ngFor directive   -->
+
+      <div  *ngFor="let n1  of  list ; let i = index">
+
+            <h1>  {{i}} --> {{n1}} </h1>
+
+      </div>
+
+      <br>
+
+    <!-- ngFor directive   in table -->
+
+      <table border="1">
+
+        <tr   *ngFor="let n1  of  list"> <td> {{n1}} </td></tr>
+
+      </table>
+
+      <br>
+          <!-- ngFor directive   in list -->
+
+          <ul   *ngFor="let n1  of  list" >
+
+                <li> {{n1}}</li>
+
+          </ul>
+
+
+
+
+
+     <br>
+     
+     

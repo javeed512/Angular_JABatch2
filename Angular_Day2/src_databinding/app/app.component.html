@@ -1,0 +1,42 @@
+<h1>Welcome to Angular</h1>
+
+<!-- string interpolation -->
+User Name: {{uname}}  <br>
+
+Title : {{title}}  <br>
+
+City: {{city}}  <br>
+
+
+
+
+
+<br>
+
+City:  <input type="text"   name="city"  [value]="city">  <br>
+
+ <!-- property binding -->
+ <img [src]="imageURL" alt="flower image">  <br>
+
+ <br>
+
+  <!-- event binding -->
+ <button type="button"  (click)="display()">Display</button>  <br>
+
+
+  UserName : {{uname}}  <br>
+
+ Enter User Name : <input type="text"  name="uname"   [(ngModel)]="uname" >
+
+
+<br>
+
+String Interpolation :  {{ setName() }}
+
+
+
+
+
+
+
+<app-hello></app-hello>
