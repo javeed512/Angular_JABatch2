@@ -1,0 +1,33 @@
+<h1>Welcome to Angular</h1>
+
+Employee Details:  {{emp | json}}
+
+
+<form   #empForm="ngForm"   class="container  col-md-5"  (ngSubmit)="getFormData(empForm.value)"  >
+
+    <div>
+    EID : <input type="number"  class="form-control" required  name="eid" ngModel    #eidControl = "ngModel"  >
+    <span style="color:red" *ngIf="eidControl.touched && eidControl.invalid">Eid is Mandatory</span>
+    </div>
+
+    <div>
+    ENAME : <input type="text"  class="form-control"  required  name="ename"  ngModel  #enameControl="ngModel">
+    <span style="color:red" *ngIf="enameControl.touched && enameControl.invalid">EName is Mandatory</span>
+    </div>
+  
+     <div>
+    SALARY : <input type="number" class="form-control"  required  name="salary"  ngModel #salControl="ngModel">
+    <span style="color:red" *ngIf="salControl.touched && salControl.invalid">Salary is Mandatory</span>
+    </div>
+
+
+   Email: <input type="text"    class="form-control"  name="email" ngModel #email="ngModel" required email><br/>
+    <div *ngIf="email.touched">
+      <p *ngIf="email.errors?.['required']" style="color:red">Email is a required field!</p>
+      <p *ngIf="email.errors?.['email']"  style="color:red">This is not a valid Email!!!</p>
+    </div>
+    
+
+        <button type="submit"  class="btn btn-success"  [disabled]="empForm.invalid" >Submit</button>
+
+</form>
