@@ -1,0 +1,30 @@
+<h1>Welcome to Angular</h1>
+
+
+
+
+<form class="container  col-md-5"  [formGroup]="registerForm"  (ngSubmit)="onSubmit()" >
+
+  <label>UserName</label> <input type="text" formControlName="uname" required class="form-control"  [ngClass]="{'is-invalid':submitted && f['uname'].errors}">
+
+  <div style="color: red;"  *ngIf="submitted && f['uname'].errors?.['required']">User Name is required</div>
+
+
+
+  <label>Password</label> <input type="text" formControlName="pwd"  required class="form-control"   [ngClass]="{'is-invalid':submitted && f['pwd'].errors}">
+
+  <div style="color: red;"  *ngIf="submitted && f['pwd'].errors?.['required']">Password is required</div>
+  <div style="color: red;"  *ngIf="submitted && f['pwd'].errors?.['minlength']">Password should be min 4 chars</div>
+  <div style="color: red;"  *ngIf="submitted && f['pwd'].errors?.['maxlength']">Password should be max 10  chars</div>
+
+
+
+  <label>Email</label> <input type="email" formControlName="email"  required class="form-control"   [ngClass]="{'is-invalid':submitted && f['email'].errors}">
+
+  <div style="color: red;"  *ngIf="submitted && f['email'].errors?.['required']">Email is required</div>
+  <div style="color: red;"  *ngIf="submitted && f['email'].errors?.['email']">Email should be in valid format</div> 
+
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+</form>
