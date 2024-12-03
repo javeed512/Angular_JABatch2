@@ -1,0 +1,27 @@
+
+<h1>Display All Products Component</h1>
+
+
+<button type="button"  (click)="getAllProducts()">View All Products</button>
+
+<br>
+
+    <!-- {{productList | json}} -->
+
+<br>
+
+<div class="container col-lg-4">
+ <table class="table table-dark">
+
+    <tr>  <th>ID</th><th>PNAME</th><th>PRICE</th> <th>DELETE</th></tr>
+    <tr *ngFor="let product of productList"> 
+        <td>{{product.id}}</td><td>{{product.pname}}</td><td>{{product.price}}</td>
+          <td> <button type="button"  (click)="deleteById(product.id)" class="btn btn-danger" >Delete</button> </td>
+
+     </tr>
+
+
+ </table>
+
+</div>
+
