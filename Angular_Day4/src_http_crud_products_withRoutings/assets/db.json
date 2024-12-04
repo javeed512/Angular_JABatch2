@@ -1,0 +1,34 @@
+{
+  "products": [
+    {
+      "id": 101,
+      "pname": "Dell Laptop",
+      "price": 80000
+    },
+    {
+      "id": 102,
+      "pname": "mobile",
+      "price": 30000
+    },
+    {
+      "id": 103,
+      "pname": "Books",
+      "price": 1200
+    },
+    {
+      "id": 104,
+      "pname": "Toys",
+      "price": 400
+    },
+    {
+      "id": 105,
+      "pname": "Flowers",
+      "price": 300
+    },
+    {
+      "id": 106,
+      "pname": "Printer",
+      "price": 4500
+    }
+  ]
+}

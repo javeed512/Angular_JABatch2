@@ -1,0 +1,59 @@
+<h1>Welcome to Angular</h1>
+
+<!-- A grey horizontal navbar that becomes vertical on small screens -->
+<nav class="navbar navbar-expand-sm bg-dark">
+
+    <!-- Links -->
+    <ul class="navbar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link"  href="#">Home</a>
+      </li>
+
+
+      <li class="nav-item">
+        <a class="nav-link"  routerLink="/display">Display</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/add-product">AddProduct</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/update-product">UpdateProduct</a>
+      </li>
+      
+       
+     
+
+      <form class="form-inline"   #formData="ngForm"  (ngSubmit)="searchByProductName(formData.value)"  >
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="pname"  ngModel >
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+
+
+    </ul>
+  
+  </nav>
+
+<br>
+
+
+
+
+<div  *ngIf="productList.length > 0" class="container col-lg-4">
+ <table class="table table-dark">
+
+    <tr>  <th>ID</th><th>PNAME</th><th>PRICE</th> <th>DELETE</th></tr>
+    <tr *ngFor="let product of productList"> 
+        <td>{{product.id}}</td><td>{{product.pname}}</td><td>{{product.price}}</td>
+         
+     </tr>
+
+
+ </table>
+
+</div>
+
+
+
+  <router-outlet></router-outlet>

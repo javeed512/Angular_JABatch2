@@ -1,0 +1,14 @@
+
+
+<h1>Add Product Details Here</h1>
+
+
+<form  class="container col-md-4"  #formData="ngForm"  (ngSubmit)="addProduct(formData.value)">
+
+    Enter PID : <input type="number" class="form-control" name="id"  ngModel  >  <br>
+    Enter PNAME : <input type="text"  class="form-control"  name="pname" ngModel> <br>
+    Enter PRICE : <input type="number" class="form-control"  name="price" ngModel > <br>
+
+        <button type="submit"  class="btn btn-primary"  >Add Product</button>
+
+</form>
