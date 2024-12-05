@@ -1,0 +1,10 @@
+
+
+* Install all in once
+npm install @ngrx/store @ngrx/effects @ngrx/store-devtools @ngrx/schematics --save
+(Or)
+* Install one after another
+npm install @ngrx/store 
+npm install @ngrx/effects 
+npm install @ngrx/store-devtools 
+npm install @ngrx/schematics
