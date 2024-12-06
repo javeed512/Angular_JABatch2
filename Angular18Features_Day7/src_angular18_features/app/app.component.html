@@ -1,0 +1,67 @@
+<h1>Welcome to Angular 18</h1>
+
+<app-my-component>
+
+    <h1  class="app">Hello from MyComponent Selector</h1>
+    <div class="cls1">
+
+            <p>Hello friends</p>
+            <b>Thank you</b>
+    </div>
+
+</app-my-component>
+
+<h1>*ngFor old</h1>
+<ul *ngFor="let course of courses">
+
+    <li>{{course.name}}</li>
+
+
+</ul>
+
+<h1> new for directive</h1>
+<ul>
+    @for (course of courses; track course.id; let index = $index) {
+    <li>{{index}}  ==> {{ course.name }}</li>
+    }
+   
+  </ul>
+
+
+  <h1>empty directive example</h1>
+
+  <ul>
+    @for (item of items; track item) {
+    <li>{{ item }}</li>
+    }
+    @empty {
+    <li>No items found</li>
+    }
+  </ul>
+
+
+
+<ng-template [ngIf]="isLoggedIn">
+    <ng-container *ngFor="let user of users">
+      <p>{{ user.name }} {{user.age}}</p>
+    </ng-container>
+  </ng-template>
+
+
+
+
+
+ 
+   
+    <div>
+     @let userDetail =   users[0];
+
+     <h1>{{userDetail | json}}</h1>
+        </div>
+ 
+
+         
+  
+
+
+<router-outlet></router-outlet>

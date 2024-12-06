@@ -1,0 +1,47 @@
+
+
+Angular 18:
+-----------
+
+1.@NgModule is removed from angular 18 projects
+2. standalone component
+3. @Component  will have import section , 
+ where modules,other components need to import before using them
+Ex:
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [RouterOutlet , MyComponentComponent , CommonModule],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css',
+  providers:[]
+})
+export class AppComponent {
+	
+users= [
+
+      {"id":1,"name":"king","age":26},
+      {"id":2,"name":"smith","age":24},
+      {"id":3,"name":"ford","age":25},
+      {"id":4,"name":"tom","age":29}
+
+
+  ];
+
+}
+
+Note: If you want to use angular directives like *ngIf , *ngFor etc  should import CommonModule.
+
+4. @let  it is used to declare variables inside templates
+
+<div>
+     @let userDetail =   users[0];
+
+     <h1>{{userDetail | json}}</h1>
+        </div>
+ 
+5. Planing to dreprecate HttpClientModule
+
+6. <ng-context>
+
+7. @for , @empty , @if  , @switch  directives in angular-18
