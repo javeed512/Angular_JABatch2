@@ -1,0 +1,57 @@
+
+
+Lunch Time: 1:20pm to 2:20pm
+
+Lab Time:
+
+2:20pm to 2:50pm
+
+
+How to create image for  java springboot projects
+
+1. check external maven installed or not 
+mvn  --version
+
+copy below plugin into pom.xml under <plugins> section
+
+<plugin>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-maven-plugin</artifactId>
+    <configuration>
+        <layers>
+            <enabled>true</enabled>
+        </layers>
+    </configuration>
+</plugin>
+	
+2. create image using below command
+
+open terminal or commandLine  --> Go to project folder 
+
+E:\Hexaware_OctNov_Documents\spring-docker-demo>mvn  spring-boot:build-image
+
+Note: Who dont have external maven , can use  'mvnw'  also  instead of mvn.
+
+3. Run docker desktop  
+4. docker images (to see all images)
+
+5. Run image using
+
+E:\Hexaware_OctNov_Documents\spring-docker-demo>docker run  --rm  -p  8081:8080  
+  --name  myspringcontainer   spring-docker-demo:0.0.1-SNAPSHOT	
+
+Note: 8081  --> container port no , we can access it directly from browser
+  8080 ---> tomcat server port not , we cannot access it directly because it exists inside container
+
+Test application using
+http://localhost:8081  ---> send request to container 
+                                  --> http://localhost:8080  --> container send request to tomcat server 
+
+
+
+
+
+
+
+
+
