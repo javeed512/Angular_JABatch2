@@ -1,0 +1,20 @@
+
+Steps to build image and push to the Docker Hub repo
+1. open springboot project folder and login to Docker Hub
+ -> docker login
+
+Do login using browser option , after successful login continue..
+
+2. 
+->docker build -t   myspringapp/javeedsir:1.0  .
+
+3.  Go and verify in DockerHub Repo if any image is pushed or visible there
+
+4. Pull docker repository to pull all images in some other folder to testing purpose
+
+-> docker pull  javeed512/hexaware_repo
+
+5. docker images (it display all images)
+
+6. docker  run -p 8181:8080  --name mycontainer   myspringapp/javeedsir:1.0 
+
